@@ -2,3 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --white: #f5f5f5;
+  --white-fade: #e6e6e6;
+  --gray: #929292;
+  --violet: #40189d;
+  --violet-fade: #e3d7ff;
+  --blue: #0d55ff;
+  --black: #313131;
+}
+
+/* global style */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-section {
+
+  background-color: var(--violet);
+
+  .navbar-side {
+    @apply basis-2/12;
+    height: 100vh;
+  }
+  .nav-btn {
+    @apply basis-9/12 h-10 pl-4 font-bold;
+    display: flex;
+    color: var(--white);
+  }
+  .nav-btn-active {
+    @apply basis-9/12 h-10 pl-4 font-bold;
+    display: flex;
+    background-color: var(--white);
+    color: var(--violet);
+    border-radius: 10px;
+  }
+
+  .content-side {
+    @apply basis-10/12;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--white-fade);
+  }
+}
