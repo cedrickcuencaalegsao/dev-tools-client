@@ -46,13 +46,13 @@
     height: 100vh;
   }
   .nav-btn {
-    @apply basis-9/12 items-center h-10 pl-4 font-semibold cursor-pointer;
+    @apply basis-9/12 items-center h-10 mt-9 pl-4 font-semibold cursor-pointer;
     font-size: 0.9rem;
     display: flex;
     color: var(--white);
   }
   .nav-btn-active {
-    @apply basis-9/12 items-center h-10 pl-4 font-bold cursor-pointer;
+    @apply basis-9/12 items-center h-10 mt-9 pl-4 font-bold cursor-pointer;
     font-size: 0.9rem;
     display: flex;
     background-color: var(--white);

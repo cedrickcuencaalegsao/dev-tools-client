@@ -4,8 +4,10 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { HomePage } from "./pages/home/HomePage";
 import { Navbar } from "./pages/home/Navbar";
+import { HomePage } from "./pages/home/HomePage";
+import { TrendingPage } from "./pages/home/TrendingPage";
+import { FavoritePage } from "./pages/home/FavoritePage";
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
           <Route path="/" element={<Navigate to={"/home"} />} />
 
           <Route path="/home" element={<Navbar />}>
-            <Route path="" element={<HomePage />} />
+            <Route path="all" element={<HomePage />} />
+            <Route path="trending" element={<TrendingPage />} />
+            <Route path="favorites" element={<FavoritePage />} />
+            
           </Route>
         </Routes>
       </Router>
