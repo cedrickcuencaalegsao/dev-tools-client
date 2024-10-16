@@ -28,7 +28,7 @@ export const InfoCard = () => {
 
         <figure className="mt-2 h-[150px] w-[80px]">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            src={require('../images/assets/card-photo.png')}
             alt="Movie"
           />
         </figure>
