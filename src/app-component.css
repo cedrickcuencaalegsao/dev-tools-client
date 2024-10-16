@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Potta+One&display=swap");
+
+:root {
+  --white: #f5f5f5;
+  --white-fade: #e6e6e6;
+  --gray: #929292;
+  --violet: #40189d;
+  --violet-fade: #e3d7ff;
+  --blue: #0d55ff;
+  --black: #313131;
+}
+
+/* global style */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  .w-60{
+    background-color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 1px 8px rgba(128, 128, 128, 0.712);
+
+    transition: transform 0.4s ease 0.1s;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  .title {
+    color: var(--violet);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .description {
+    font-size: 0.60rem;
+    line-height: .75rem;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+  }
+}
