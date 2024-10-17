@@ -8,6 +8,7 @@ export const Search = () => {
         placeholder="Search here..."
         className="search-input"
         style={{
+          fontSize: "1em",
           backgroundColor: "transparent",
           border: "none",
           outline: "none",
