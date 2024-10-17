@@ -1,7 +1,7 @@
 export const InfoCard = () => {
   return (
-    <div className="info-card">
-      <div className="flex w-60 px-4">
+    <div className="info-card w-[15rem] h-[10rem]">
+      <div className="flex px-4">
         <div className="mt-2 w-44">
           <div className="title">Tailwind Css</div>
           <div className="description">

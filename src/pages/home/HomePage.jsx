@@ -27,47 +27,42 @@ export const HomePage = () => {
           <button className="suggest-btn">Scroll Animations</button>
         </div>
 
-        <div className="wrapper mt-3 justify-end">
+        <div className="wrapper mt-3 pr-4 justify-end">
           <select className="category-dropdown">
             <option selected>Newest</option>
+            <option>Oldest</option>
+            <option>A-Z</option>
+            <option>Z-A</option>
           </select>
         </div>
 
         <div className="cards-container">
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
 
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
+          <div className="flex justify-end">
             <InfoCard />
           </div>
-          <div>
-            <InfoCard />
-          </div>
-          <div>
-            <InfoCard />
-          </div>
-          <div>
-            <InfoCard />
-          </div>
+
         </div>
       </div>
     </div>

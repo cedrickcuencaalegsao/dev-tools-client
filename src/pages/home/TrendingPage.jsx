@@ -1,5 +1,24 @@
+import { InfoCard } from "../../components/ToolsInfoCard";
+
 export const TrendingPage = () => {
-  return <div className="trending-section">\
-  <div className="text-2xl">Hello Trending</div>
-  </div>
-}
+  return (
+    <div className="trending-section">
+      <div className="lg:px-8 md:px-3">
+        <div className="wrapper mt-5 pr-4 justify-end">
+          <select className="category-dropdown">
+            <option selected>Newest</option>
+            <option>Oldest</option>
+            <option>A-Z</option>
+            <option>Z-A</option>
+          </select>
+        </div>
+
+        <div className="cards-container">
+          <div className="flex justify-center">
+            <InfoCard />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

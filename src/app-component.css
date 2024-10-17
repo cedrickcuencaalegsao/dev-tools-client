@@ -20,26 +20,23 @@
 }
 
 .info-card {
-  .w-60{
-    background-color: var(--white);
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 2px 1px 8px rgba(128, 128, 128, 0.712);
+  background-color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px rgba(128, 128, 128, 0.712);
 
-    transition: transform 0.4s ease 0.1s;
-
-    &:hover{
-      transform: scale(1.1);
-    }
+  &:hover {
+    border: 2px solid var(--violet);
   }
+
   .title {
     color: var(--violet);
     font-size: 0.9rem;
     font-weight: 700;
   }
   .description {
-    font-size: 0.60rem;
-    line-height: .75rem;
+    font-size: 0.6rem;
+    line-height: 0.75rem;
 
     display: -webkit-box;
     text-overflow: ellipsis;
