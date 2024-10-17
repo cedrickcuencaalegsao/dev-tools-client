@@ -6,7 +6,7 @@ export const Search = () => {
       <input
         type="text"
         placeholder="Search here..."
-        // className="search-input"
+        className="search-input"
         style={{
           backgroundColor: "transparent",
           border: "none",
