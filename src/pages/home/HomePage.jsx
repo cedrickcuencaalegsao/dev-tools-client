@@ -5,16 +5,16 @@ export const HomePage = () => {
   return (
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
-        <div className="wrapper search-container">
+        {/* <div className="wrapper search-container">
           <IoSearch className="icon" />
           <input
             className="search-input"
             type="text"
             placeholder="Search Recipe here..."
           />
-        </div>
+        </div> */}
 
-        <div className="suggestion-container">
+        {/* <div className="suggestion-container">
           <span className="mr-5">Suggestions</span>
 
           <button className="suggest-btn-active">Glassmorphism</button>
@@ -25,16 +25,16 @@ export const HomePage = () => {
           <button className="suggest-btn">Icon Components</button>
           <button className="suggest-btn">Image Sliders</button>
           <button className="suggest-btn">Scroll Animations</button>
-        </div>
+        </div> */}
 
-        <div className="wrapper mt-3 pr-4 justify-end">
+        {/* <div className="wrapper mt-3 pr-4 justify-end">
           <select className="category-dropdown">
             <option selected>Newest</option>
             <option>Oldest</option>
             <option>A-Z</option>
             <option>Z-A</option>
           </select>
-        </div>
+        </div> */}
 
         <div className="cards-container">
           <div className="flex justify-end">
