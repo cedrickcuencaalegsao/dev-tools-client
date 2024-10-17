@@ -1,18 +1,11 @@
-import { IoSearch } from "react-icons/io5";
+import { Search } from "../../components/Search";
 import { InfoCard } from "../../components/ToolsInfoCard";
 
 export const HomePage = () => {
   return (
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
-        {/* <div className="wrapper search-container">
-          <IoSearch className="icon" />
-          <input
-            className="search-input"
-            type="text"
-            placeholder="Search Recipe here..."
-          />
-        </div> */}
+        <Search />
 
         {/* <div className="suggestion-container">
           <span className="mr-5">Suggestions</span>
@@ -62,7 +55,6 @@ export const HomePage = () => {
           <div className="flex justify-end">
             <InfoCard />
           </div>
-
         </div>
       </div>
     </div>
