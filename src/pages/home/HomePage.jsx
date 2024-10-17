@@ -1,6 +1,7 @@
 import { Search } from "../../components/Search";
 import { InfoCard } from "../../components/ToolsInfoCard";
 import { Suggestions } from "../../components/Suggestion";
+import { Category } from "../../components/Category";
 
 export const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ export const HomePage = () => {
       <div className="lg:px-8 md:px-3">
         <Search />
         <Suggestions />
+        <Category />
 
         <div className="cards-container">
           <div className="flex justify-end">
