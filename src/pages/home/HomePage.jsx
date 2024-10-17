@@ -5,14 +5,14 @@ export const HomePage = () => {
   return (
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
-        <label className="wrapper search-container">
+        <div className="wrapper search-container">
           <IoSearch className="icon" />
           <input
             className="search-input"
             type="text"
             placeholder="Search Recipe here..."
           />
-        </label>
+        </div>
 
         <div className="suggestion-container">
           <span className="mr-5">Suggestions</span>
