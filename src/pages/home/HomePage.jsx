@@ -1,11 +1,13 @@
 import { Search } from "../../components/Search";
 import { InfoCard } from "../../components/ToolsInfoCard";
+import { Suggestions } from "../../components/Suggestion";
 
 export const HomePage = () => {
   return (
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
         <Search />
+        <Suggestions />
         {/* <div className="wrapper search-container">
           <IoSearch className="icon" />
           <input
