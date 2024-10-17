@@ -6,6 +6,14 @@ export const HomePage = () => {
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
         <Search />
+        {/* <div className="wrapper search-container">
+          <IoSearch className="icon" />
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search Recipe here..."
+          />
+        </div> */}
 
         {/* <div className="suggestion-container">
           <span className="mr-5">Suggestions</span>
