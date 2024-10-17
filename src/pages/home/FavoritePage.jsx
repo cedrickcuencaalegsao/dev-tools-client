@@ -14,7 +14,7 @@ export const FavoritePage = () => {
         </div>
 
         <div className="cards-container">
-          <div className="flex justify-center">
+          <div className="flex justify-end">
             <InfoCard />
           </div>
         </div>
