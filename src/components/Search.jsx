@@ -8,11 +8,11 @@ export const Search = () => {
         placeholder="Search here..."
         // className="search-input"
         style={{
-          backgroundColor: 'transparent',
-          border: '1px solid #ccc',
-          color: '#000',
-          padding: '8px',
-          borderRadius: '4px'
+          backgroundColor: "transparent",
+          border: "none",
+          outline: "none",
+          color: "#000",
+          borderRadius: "4px",
         }}
       />
     </div>
