@@ -1,9 +1,9 @@
 export const Suggestions = () => {
   return (
-    <div className="p-4">
-      <div className="suggestion-container">
+    <div className="p-4 h-[500px]"> {/* Setting height to 500px */}
+      <div className="suggestion-container h-full flex flex-col justify-between">
         <span className="block text-lg font-semibold mb-4">Suggestions</span>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 overflow-auto">
           <button className="suggest-btn-active bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg">
             Glassmorphism
           </button>
