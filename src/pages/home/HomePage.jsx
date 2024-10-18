@@ -8,7 +8,9 @@ export const HomePage = () => {
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">
         <Search />
+        <div className="suggestion-container">
         <Suggestions />
+        </div>
         <Category />
 
         <div className="cards-container">

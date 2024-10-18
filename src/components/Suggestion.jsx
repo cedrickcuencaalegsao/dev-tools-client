@@ -5,28 +5,28 @@ export const Suggestions = () => {
         <span className="text-lg font-semibold">Suggestions</span>
       </div>
       <div className="flex flex-wrap gap-3">
-        <button className="suggest-btn-active bg-blue-800 text-white px-4 py-2 rounded-lg shadow-lg">
+        <button className="suggest-btn-active">
           Glassmorphism
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn">
           Custom Borders
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn">
           Tailwind Compo
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn ">
           Icons
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn">
           Bootstrap Compo
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn ">
           Icon Components
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn">
           Image Sliders
         </button>
-        <button className="suggest-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow">
+        <button className="suggest-btn">
           Scroll Animations
         </button>
       </div>
