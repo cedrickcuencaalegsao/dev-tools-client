@@ -4,6 +4,7 @@ import { Suggestions } from "../../components/Suggestion";
 import { Category } from "../../components/Category";
 
 export const HomePage = () => {
+  
   return (
     <div className="homepage-section">
       <div className="lg:px-8 md:px-3">

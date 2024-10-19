@@ -11,24 +11,24 @@ export const Suggestions = () => {
         <button className="suggest-btn">
           Custom Borders
         </button>
-        <button className="suggest-btn">
+        {/* <button className="suggest-btn">
           Tailwind Compo
-        </button>
-        <button className="suggest-btn ">
+        </button> */}
+        {/* <button className="suggest-btn ">
           Icons
-        </button>
-        <button className="suggest-btn">
+        </button> */}
+        {/* <button className="suggest-btn">
           Bootstrap Compo
-        </button>
-        <button className="suggest-btn ">
+        </button> */}
+        {/* <button className="suggest-btn ">
           Icon Components
-        </button>
-        <button className="suggest-btn">
+        </button> */}
+        {/* <button className="suggest-btn">
           Image Sliders
-        </button>
-        <button className="suggest-btn">
+        </button> */}
+        {/* <button className="suggest-btn">
           Scroll Animations
-        </button>
+        </button> */}
       </div>
     </div>
   );
