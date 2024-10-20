@@ -1,5 +1,4 @@
 export const InfoCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="info-card w-[15rem] h-[10rem]">
       <div className="flex px-4">

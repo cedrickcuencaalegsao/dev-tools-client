@@ -5,20 +5,18 @@ import { Category } from "../../components/Category";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { GetAllTools } from "../../hooks/useGetTools";
 
 export const HomePage = () => {
   const [tools, set_tools] = useState([]);
-
-  const getAllToolsFn = async () => {
-    try {
-      const data = await axios.get("http://127.0.0.1:8000/api/tools");
-      set_tools(data?.data?.data);
-    } catch (error) {}
-  };
+  const { getAllToolsFn } = GetAllTools();
 
   useQuery({
     queryKey: ["tools", "all"],
-    queryFn: getAllToolsFn,
+    queryFn: async () => {
+      const data = await getAllToolsFn();
+      set_tools(data);
+    },
   });
 
   return (
@@ -34,11 +32,10 @@ export const HomePage = () => {
           {tools.map((data) => {
             return (
               <div className="flex justify-end">
-                <InfoCard data={data}/>
+                <InfoCard data={data} />
               </div>
             );
           })}
-
         </div>
       </div>
     </div>
