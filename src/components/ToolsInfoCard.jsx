@@ -7,10 +7,8 @@ export const InfoCard = ({ data }) => {
   console.log(data);
   return (
     <div
-      className="tooltip tooltip-bottom info-card w-[15rem] h-[10rem]"
+      className="info-card w-[15rem] h-[10rem]"
       onClick={() => openUrl(data.documentationURL)}
-      data-tip={data?.documentationURL}
-      data-for="custom-tooltip"
     >
       <div className="flex px-4">
         <div className="mt-2 w-44">
