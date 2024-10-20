@@ -28,7 +28,7 @@ export const HomePage = () => {
         </div>
         <Category />
 
-        <div className="cards-container">
+        <div className="cards-container border">
           {tools.map((data) => {
             return (
               <div className="flex justify-end">
