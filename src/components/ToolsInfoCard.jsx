@@ -1,36 +1,15 @@
-export const InfoCard = () => {
+export const InfoCard = ({ data }) => {
+  console.log(data);
   return (
     <div className="info-card w-[15rem] h-[10rem]">
       <div className="flex px-4">
         <div className="mt-2 w-44">
-          <div className="title">Tailwind Css</div>
-          <div className="description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-            veniam aspernatur aliquid, distinctio dicta molestiae, beatae
-            sapiente libero esse, sunt repellat odio minus! Sit, sapiente iste
-            dolore dolor magnam rem autem nam praesentium aspernatur, hic facere
-            mollitia perspiciatis expedita vel assumenda, vitae atque eaque!
-            Porro ipsam sint adipisci molestias. Rerum harum laborum consequatur
-            cum vitae quos ab, nesciunt labore quaerat alias incidunt. Maxime
-            aliquam dolore in expedita est! Eius exercitationem porro,
-            reprehenderit molestias, dolore officia, perspiciatis earum ullam
-            recusandae inventore expedita? Corrupti deserunt tempora molestiae
-            fugiat quas ad maxime nihil autem facere dolor veniam praesentium,
-            error doloremque, nisi reiciendis nobis maiores tenetur iste id,
-            dolore culpa expedita nam! Aut cum neque ab nesciunt corrupti!
-            Dignissimos temporibus numquam esse ipsam non quod nemo placeat
-            maxime quidem, nisi totam maiores. Suscipit iusto tempora
-            repudiandae aliquid accusantium. Labore, consequatur! Accusantium
-            dolore eligendi, magni expedita vitae beatae dolorem molestiae
-            fugiat, natus doloribus commodi distinctio?
-          </div>
+          <div className="title">{data?.name}</div>
+          <div className="description">{data?.description}</div>
         </div>
 
         <figure className="mt-2 h-[150px] w-[80px]">
-          <img
-            src={require('../images/assets/card-photo.png')}
-            alt="Movie"
-          />
+          <img src={require("../images/assets/card-photo.png")} alt="Movie" />
         </figure>
       </div>
     </div>
