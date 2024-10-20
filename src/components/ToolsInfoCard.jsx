@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 export const InfoCard = ({ data }) => {
   const openUrl = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
