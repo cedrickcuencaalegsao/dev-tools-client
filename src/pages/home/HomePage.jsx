@@ -65,7 +65,7 @@ export const HomePage = () => {
         </div>
         <Category />
 
-        {tools.length === 0 && (
+        {tools?.length === 0 && (
           <div className="mt-4 text-[3rem] text-center font-semibold">
             Tool Not Found...
           </div>
