@@ -2,7 +2,6 @@ export const InfoCard = ({ data }) => {
   const openUrl = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
-  console.log(data);
   return (
     <div
       className="info-card w-[15rem] h-[10rem]"

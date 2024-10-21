@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import axios from "axios";
 
-export const Search = () => {
+export const Search = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
@@ -35,13 +35,12 @@ export const Search = () => {
   return (
     <div className="wrapper search-container">
       <IoSearch className="icon" style={{ margin: "0px 10px 0px 10px" }} />
-      <form onSubmit={handleSearch}>
+      <form onSubmit={props?.onSubmit}>
         <input
           type="text"
           placeholder="Search here..."
           className="search-input"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => sessionStorage.setItem('search',e.target.value)}
           style={{
             fontSize: "1em",
             backgroundColor: "transparent",
