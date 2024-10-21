@@ -15,7 +15,11 @@ export const InfoCard = ({ data }) => {
         </div>
 
         <figure className="mt-2 h-[150px] w-[80px]">
-          <img src={require("../images/assets/card-photo.png")} alt="Movie" />
+          {/* <img src={require("../images/assets/card-photo.png")} alt="Movie" /> */}
+          <img
+            src={`http://127.0.0.1:8000/api/images/${data.image}`}
+            alt="Movie"
+          />
         </figure>
       </div>
     </div>
