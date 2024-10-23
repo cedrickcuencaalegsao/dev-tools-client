@@ -1,7 +1,24 @@
+import axios from "axios";
+
 export const InfoCard = ({ data }) => {
-  console.log(data)
-  const openUrl = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const updateClicks = async (args) => {
+    try {
+      const response = await axios.put(
+        `http://127.0.0.1:8000/api/tool/${args}/clickcount`
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error.data);
+    }
+    return false;
+  };
+
+  const openUrl = async (url) => {
+    const update = await updateClicks(data.id);
+    console.log(update);
+    if (update === true) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
   };
   return (
     <div
