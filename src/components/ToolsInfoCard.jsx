@@ -15,15 +15,14 @@ export const InfoCard = ({ data }) => {
 
   const openUrl = async (url) => {
     const update = await updateClicks(data.id);
-    console.log(update);
-    if (update === true) {
+    if (update) {
       window.open(url, "_blank", "noopener,noreferrer");
     }
   };
   return (
     <div
       className="info-card w-[15rem] h-[10rem]"
-      onClick={() => openUrl(data.documentationURL)}
+      onClick={() => openUrl(data.documentation_url)}
     >
       <div className="flex px-4">
         <div className="mt-2 w-44">

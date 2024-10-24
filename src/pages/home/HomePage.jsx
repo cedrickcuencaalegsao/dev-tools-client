@@ -1,15 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 // Hooks
 import { GetAllTools } from "../../hooks/useGetTools";
 import { searchTools } from "../../hooks/useSearchTools";
-
 // Components
 import { InfoCard } from "../../components/ToolsInfoCard";
-import { Suggestions } from "../../components/Suggestion";
-import { Category } from "../../components/Category";
 
 export const HomePage = () => {
   const { getAllToolsFn } = GetAllTools();
@@ -17,6 +14,9 @@ export const HomePage = () => {
 
   const [tools, set_tools] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [suggestionClass, set_suggestionClass] = useState("hidden");
+  const [suggestions, set_suggestions] = useState([]);
+  const [filterStatus, set_filterStatus] = useState("getlatest");
 
   const handleSearchFormFn = async (e) => {
     e.preventDefault();
@@ -24,18 +24,22 @@ export const HomePage = () => {
     const response = await searchToolsFn(searchTerm);
     if (response?.status === 200) {
       set_tools(response?.data);
+      set_suggestions(response?.suggestion);
+      set_suggestionClass("block");
     } else {
-      set_tools(await getAllToolsFn());
+      set_tools(await getAllToolsFn(filterStatus));
+      set_suggestionClass("hidden");
     }
   };
 
-  useQuery({
-    queryKey: ["tools", "all"],
-    queryFn: async () => {
-      const data = await getAllToolsFn();
-      set_tools(data);
-    },
-  });
+  const effectFn = async () => {
+    const data = await getAllToolsFn(filterStatus);
+    set_tools(data);
+  };
+
+  useEffect(() => {
+    effectFn();
+  }, [filterStatus]);
 
   return (
     <div className="homepage-section">
@@ -60,16 +64,31 @@ export const HomePage = () => {
           </form>
         </div>
 
-        <div className="suggestion-container">
-          <Suggestions />
+        <div className={`suggestion-container ${suggestionClass}`}>
+          <span>Suggestion</span>
+          {suggestions.map((data) => {
+            return <button className="suggest-btn">{data}</button>;
+          })}
         </div>
-        <Category />
+
+        <div className="wrapper mt-3 pr-4 justify-end">
+          <select
+            className="category-dropdown"
+            onChange={(e) => set_filterStatus(e.target.value)}
+          >
+            <option value={"getlatest"}>Newest</option>
+            <option value={"getoldest"}>Oldest</option>
+            <option value={"getatoz"}>A-Z</option>
+            <option value={"getztoa"}>Z-A</option>
+          </select>
+        </div>
 
         {tools?.length === 0 && (
           <div className="mt-4 text-[3rem] text-center font-semibold">
             Tool Not Found...
           </div>
         )}
+
         <div className="cards-container border">
           {tools.map((data) => {
             return (

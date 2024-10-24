@@ -13,11 +13,13 @@ export const searchTools = () => {
         return {
           status: match?.status,
           data: [match?.data?.exactMatch, ...match?.data?.relatedItems],
+          suggestion: JSON.parse(match?.data?.exactMatch?.category),
         };
       } else {
         return {
           status: match?.status,
           data: match?.data?.relatedItems,
+          suggestion: JSON.parse(match?.data?.relatedItems?.[0]?.category),
         };
       }
     } catch (error) {
