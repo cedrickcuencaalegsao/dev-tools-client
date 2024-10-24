@@ -44,7 +44,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="content-side">
+      <div className="content-side h-[100vh] overflow-auto">
         <Outlet />
       </div>
     </div>
