@@ -22,7 +22,6 @@
 .info-card {
   background-color: var(--white);
   border-radius: 10px;
-  cursor: pointer;
   box-shadow: 2px 1px 8px rgba(128, 128, 128, 0.712);
 
   &:hover {
@@ -43,6 +42,15 @@
     text-overflow: ellipsis;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 9;
+    -webkit-line-clamp: 7;
+  }
+  .favorite-btn{
+    @apply w-7 h-7 cursor-pointer;
+    color: var(--violet);
+  }
+
+  .visit-link{
+    @apply underline underline-offset-2 font-semibold cursor-pointer;
+    color: var(--violet);
   }
 }
