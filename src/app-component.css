@@ -50,7 +50,8 @@
   }
 
   .visit-link{
-    @apply underline underline-offset-2 font-semibold cursor-pointer;
+    @apply underline underline-offset-2 font-[600] cursor-pointer;
+    letter-spacing: 0.03rem;
     color: var(--violet);
   }
 }

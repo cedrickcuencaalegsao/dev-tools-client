@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export const InfoCard = ({ data }) => {
   const updateClicks = async (args) => {
@@ -42,6 +42,7 @@ export const InfoCard = ({ data }) => {
                 className="favorite-btn"
                 onClick={() => console.log("object")}
               />
+              {/* <FaHeart /> --> when favorites*/}
             </div>
             <div className="basis-6/12 text-end">
               <span

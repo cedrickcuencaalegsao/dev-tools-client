@@ -32,6 +32,11 @@ export const HomePage = () => {
     }
   };
 
+  const handleSuggestionFn = async (suggest) => {
+    const response = await searchToolsFn(suggest);
+    set_tools(response?.data)
+  };
+
   const effectFn = async () => {
     const data = await getAllToolsFn(filterStatus);
     set_tools(data);
@@ -67,7 +72,14 @@ export const HomePage = () => {
         <div className={`suggestion-container ${suggestionClass}`}>
           <span>Suggestion</span>
           {suggestions.map((data) => {
-            return <button className="suggest-btn">{data}</button>;
+            return (
+              <button
+                className="suggest-btn"
+                onClick={() => handleSuggestionFn(data)}
+              >
+                {data}
+              </button>
+            );
           })}
         </div>
 
