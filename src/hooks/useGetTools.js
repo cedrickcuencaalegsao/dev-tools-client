@@ -14,3 +14,13 @@ export const GetAllTools = () => {
 
   return { getAllToolsFn };
 };
+
+export const GetTrendingTools = () => {
+  const getTrendingFn = async () => {
+    try {
+      const data = await axios.get("http://127.0.0.1:8000/api/trending");
+      return data?.data?.data;
+    } catch (error) {}
+  };
+  return { getTrendingFn };
+};

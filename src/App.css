@@ -116,9 +116,8 @@
     }
 
     option {
-      background-color: var(--violet-fade);
       font-weight: 700;
-      color: var(--black);
+      color: var(--violet);
     }
   }
 
@@ -160,9 +159,8 @@
     }
 
     option {
-      background-color: var(--violet-fade);
       font-weight: 700;
-      color: var(--black);
+      color: var(--violet);
     }
   }
 }

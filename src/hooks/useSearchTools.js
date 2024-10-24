@@ -23,6 +23,7 @@ export const searchTools = () => {
         };
       }
     } catch (error) {
+      console.log(error)
       return { status: error?.status, data: error.response?.data?.message };
     }
   };

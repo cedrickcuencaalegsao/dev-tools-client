@@ -1,6 +1,8 @@
 import { InfoCard } from "../../components/ToolsInfoCard";
 
 export const FavoritePage = () => {
+  const mockup_fav = [2, 13, 34, 20, 23, 43]; //Mga id ni sa tools
+
   return (
     <div className="favorite-section">
       <div className="lg:px-8 md:px-3">
@@ -14,9 +16,7 @@ export const FavoritePage = () => {
         </div>
 
         <div className="cards-container">
-          <div className="flex justify-end">
-            {/* <InfoCard /> */}
-          </div>
+          <div className="flex justify-end">{/* <InfoCard /> */}</div>
         </div>
       </div>
     </div>
