@@ -34,7 +34,7 @@ export const HomePage = () => {
 
   const handleSuggestionFn = async (suggest) => {
     const response = await searchToolsFn(suggest);
-    set_tools(response?.data)
+    set_tools(response?.data);
   };
 
   const effectFn = async () => {
@@ -105,7 +105,7 @@ export const HomePage = () => {
           {tools.map((data) => {
             return (
               <div className="flex justify-end">
-                <InfoCard data={data} />
+                <InfoCard data={data} isFavorite={false} />
               </div>
             );
           })}

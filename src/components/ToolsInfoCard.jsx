@@ -1,7 +1,10 @@
 import axios from "axios";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-export const InfoCard = ({ data }) => {
+export const InfoCard = ({ data, isFavorite }) => {
+  const navigate = useNavigate();
+
   const updateClicks = async (args) => {
     try {
       const response = await axios.put(
@@ -20,6 +23,26 @@ export const InfoCard = ({ data }) => {
       window.open(url, "_blank", "noopener,noreferrer");
     }
   };
+
+  const removeFavoriteFn = (id) => {
+    let favorite = JSON.parse(localStorage.getItem("favorite"));
+    favorite = favorite.filter((data) => {
+      return data !== id;
+    });
+
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+    navigate("/home/all");
+  };
+
+  const addFavoriteFn = (id) => {
+    const favorite = JSON.parse(localStorage.getItem("favorite"));
+    if (!favorite.includes(id)) {
+      favorite.push(id);
+      navigate("/home/favorites");
+    }
+    localStorage.setItem("favorite", JSON.stringify(favorite));
+  };
+
   return (
     <div className="info-card w-[15rem] h-[10rem]">
       <div className="flex flex-wrap px-4">
@@ -38,11 +61,17 @@ export const InfoCard = ({ data }) => {
         <div className="basis-full">
           <div className="wrapper">
             <div className="basis-6/12">
-              <FaRegHeart
-                className="favorite-btn"
-                onClick={() => console.log("object")}
-              />
-              {/* <FaHeart /> --> when favorites*/}
+              {isFavorite ? (
+                <FaHeart
+                  className="favorite-btn"
+                  onClick={() => removeFavoriteFn(data.id)}
+                />
+              ) : (
+                <FaRegHeart
+                  className="favorite-btn"
+                  onClick={() => addFavoriteFn(data.id)}
+                />
+              )}
             </div>
             <div className="basis-6/12 text-end">
               <span

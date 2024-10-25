@@ -24,3 +24,23 @@ export const GetTrendingTools = () => {
   };
   return { getTrendingFn };
 };
+
+export const GetOneTool = () => {
+  const getOneToolFn = async (ids) => {
+    try {
+      const response = await Promise.all(
+        ids.map(async (id) => {
+          const { data } = await axios.get(
+            `http://127.0.0.1:8000/api/get-tool/${id}`
+          );
+          return data?.data;
+        })
+      );
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return { getOneToolFn };
+};
