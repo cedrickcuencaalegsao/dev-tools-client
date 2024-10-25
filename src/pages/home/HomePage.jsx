@@ -71,7 +71,7 @@ export const HomePage = () => {
 
         <div className={`suggestion-container ${suggestionClass}`}>
           <span>Suggestion</span>
-          {suggestions.map((data) => {
+          {suggestions?.map((data) => {
             return (
               <button
                 className="suggest-btn"

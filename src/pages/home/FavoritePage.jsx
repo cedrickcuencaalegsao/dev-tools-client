@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { InfoCard } from "../../components/ToolsInfoCard";
 
 export const FavoritePage = () => {
-  const mockup_fav = [2, 13, 34, 20, 23, 43]; //Mga id ni sa tools
+  // const favorite_fake = [2, 13, 34, 20, 23, 43];
 
+  useEffect(() => {
+    const favorites = localStorage.getItem("favorite");
+    console.log(JSON.parse(favorites));
+  });
   return (
     <div className="favorite-section">
       <div className="lg:px-8 md:px-3">

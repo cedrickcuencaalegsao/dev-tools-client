@@ -19,15 +19,7 @@ export const TrendingPage = () => {
   return (
     <div className="trending-section">
       <div className="lg:px-8 md:px-3">
-        <div className="wrapper mt-5 pr-4 justify-end">
-          <select className="category-dropdown">
-            <option selected>Newest</option>
-            <option>Oldest</option>
-            <option>A-Z</option>
-            <option>Z-A</option>
-          </select>
-        </div>
-
+        <div className="mb-[3.5rem]"></div>
         <div className="cards-container">
           {tools.map((data) => {
             return (
