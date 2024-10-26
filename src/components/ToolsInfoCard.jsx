@@ -35,7 +35,7 @@ export const InfoCard = ({ data, isFavorite }) => {
   };
 
   const addFavoriteFn = (id) => {
-    const favorite = JSON.parse(localStorage.getItem("favorite"));
+    const favorite = JSON.parse(localStorage.getItem("favorite")) || [];
     if (!favorite.includes(id)) {
       favorite.push(id);
       navigate("/home/favorites");

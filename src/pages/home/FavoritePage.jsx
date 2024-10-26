@@ -10,12 +10,19 @@ export const FavoritePage = () => {
   const [favoriteTools, set_favoriteTools] = useState([]);
 
   const effectFn = async () => {
-    const response = await getOneToolFn(favorites);
-    set_favoriteTools(response);
+    console.log(favorites.length);
+    if (favorites.length !== 0) {
+      const response = await getOneToolFn(favorites);
+      set_favoriteTools(response);
+    }
   };
 
   useEffect(() => {
     effectFn();
+    const interval = setInterval(() => {
+      effectFn();
+    }, 5000);
+    return clearInterval(interval);
   });
   return (
     <div className="favorite-section">
